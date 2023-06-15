@@ -19,6 +19,7 @@ const COLOR_RED_PALE = 'ffe0e0';
 const COLOR_RED_LIGHT = 'ffcccc';
 const COLOR_RED = 'ff9999';
 const COLOR_RED_DARK = 'ff6666';
+const COLOR_PINK = 'f8c8dc';
 
 const COLOR_PURPLE_LIGHT = 'd966ff';
 const COLOR_PURPLE = '9900cc';
@@ -63,6 +64,7 @@ const FEATURE_FLAW_DEFINITION =
   'of the project.</p>';
 const DOCUMENTATION_BUG_DEFINITION =
   '<p>A flaw in the documentation ' + '<span style="color:grey;">e.g., a missing step, a wrong instruction, typos</span></p>';
+const UI_FLAW_DEFINITION = '<p>A flaw in the UI ' + '<span style="color:grey;">e.g., words are cut off</span></p>';
 
 const ACCEPTED_DEFINITION = '<p>You accept it as a bug.</p>';
 const NOT_IN_SCOPE_DEFINITION =
@@ -101,7 +103,8 @@ const REQUIRED_LABELS = {
   type: {
     DocumentationBug: new Label('type', 'DocumentationBug', COLOR_PURPLE_LIGHT, DOCUMENTATION_BUG_DEFINITION),
     FeatureFlaw: new Label('type', 'FeatureFlaw', COLOR_PURPLE_LIGHT, FEATURE_FLAW_DEFINITION),
-    FunctionalityBug: new Label('type', 'FunctionalityBug', COLOR_PURPLE, FUNCTIONALITY_BUG_DEFINITION)
+    FunctionalityBug: new Label('type', 'FunctionalityBug', COLOR_PURPLE, FUNCTIONALITY_BUG_DEFINITION),
+    UIFlaw: new Label('type', 'UIFlaw', COLOR_PINK, UI_FLAW_DEFINITION)
   },
   response: {
     Accepted: new Label('response', 'Accepted', COLOR_GREEN, ACCEPTED_DEFINITION),
