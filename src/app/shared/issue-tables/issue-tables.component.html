@@ -94,7 +94,7 @@
 
   <!--Assignee Column-->
   <ng-container matColumnDef="assignees">
-    <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Assignees </mat-header-cell>
+    <mat-header-cell mat-header-cell *matHeaderCellDef> Assignees </mat-header-cell>
     <mat-cell *matCellDef="let issue">
       <span (click)="$event.stopPropagation()" style="cursor: default" *ngIf="issue.assignees.length !== 0">
         {{ issue.assignees.join(', ') }}
