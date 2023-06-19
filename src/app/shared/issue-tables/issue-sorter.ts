@@ -14,8 +14,6 @@ export function getSortedData(sort: MatSort, data: Issue[]): Issue[] {
         return direction * compareByIssueType(a.type, b.type);
       case 'severity':
         return direction * compareBySeverity(a.severity, b.severity);
-      case 'assignees':
-        return direction * compareByStringValue(a.assignees.join(', '), b.assignees.join(', '));
       case 'teamAssigned':
         return direction * compareByStringValue(a.teamAssigned.id, b.teamAssigned.id);
       case 'Todo Remaining':

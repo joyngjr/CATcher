@@ -16,17 +16,6 @@ describe('issuer-sorter', () => {
     const todoIssuesList: Issue[] = [moderationIssue, otherModerationIssue];
     const matSort: MatSort = new MatSort();
 
-    it('sorts issues based on their assignees correctly', () => {
-      matSort.active = 'assignees';
-      matSort.direction = 'asc';
-      const sortedIssuesByAssigneesAsc = getSortedData(matSort, issuesList);
-      assertOrder(sortedIssuesByAssigneesAsc, dummyIssue, otherDummyIssue);
-
-      matSort.direction = 'desc';
-      const sortedIssuesByAssigneesDesc = getSortedData(matSort, issuesList);
-      assertOrder(sortedIssuesByAssigneesDesc, otherDummyIssue, dummyIssue);
-    });
-
     it('sorts issues based on their string fields correctly', () => {
       matSort.active = 'title';
       matSort.direction = 'asc';
